@@ -1,0 +1,60 @@
+/* Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container-edittask .modal-title {
+    width: 22vw !important;
+}
+
+.modal-container-edittask {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 25vw;
+    text-align: start;
+}
+
+.modal-container-edittask label {
+    display: block;
+    margin-top: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: #080808;
+    margin-left: 1.1vw;
+    width: 20vw;
+}
+
+.modal-content {
+    margin-bottom: 20px;
+}
+
+.modal-container-edittask input,
+.modal-priority,
+.modal-description {
+  width: 20vw !important;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: border-color 0.2s;
+  font-size: 1rem;
+}
+
+.modal-description {
+    margin-left: 1vw;
+}
+
+p{
+    margin-bottom: 6px;
+}

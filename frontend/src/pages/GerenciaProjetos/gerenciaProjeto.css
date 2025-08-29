@@ -1,0 +1,74 @@
+.container-gerencia-projetos {
+  display: flex;
+  flex-direction: row; 
+  min-height: 100vh;
+}
+
+.container-gerencia-projetos .pesquisar {
+  width: 88vw;
+  margin-left: 1vw;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.container-gerencia-projetos .barra-pesquisa {
+  margin-top: 2vh;
+  width: 50vh !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container-gerencia-projetos .barra-pesquisa input {
+  padding-left: 35px;
+  height: 36px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.container-gerencia-projetos .btn-pesquisar {
+  height: 36px;
+  width: auto;
+  padding: 0 20px;
+  background-color: #d1ce15;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.main-content-wrapper-projetos {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 100vh;
+}
+
+.content-beta-projetos {
+  flex-grow: 1;
+  margin-left: 7vw;
+  justify-content: start;
+  align-items: start;
+  overflow-y: auto;
+}
+
+.projetos-ger-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+  text-align: center;
+  background-color: #f8f8f8;
+  color: #555;
+}
+
+.projetos-ger-footer p {
+    font-size: 0.9em;
+    color: #777; 
+    text-align: center;
+}

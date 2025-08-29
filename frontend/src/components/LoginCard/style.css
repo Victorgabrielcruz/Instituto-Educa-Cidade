@@ -1,0 +1,90 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 60vh;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-login{
+    margin-bottom: 2vh;
+    border-bottom: 2px solid #E3E0E0;
+    width: 100%;
+}
+
+.header-login img{
+   margin-left: 3vw;
+   padding: 15px;
+   margin-top: 0;
+}
+
+.login p{
+    margin-top: 2vh;
+    color: #9A9A9A;   
+    transition: transform 0.2s;
+
+}
+
+.login input[type="text"] {
+    width: 20vw;
+    margin-left: 1vw;
+    margin-top: 16px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.2s;
+}
+.login input[type="text"]:hover {
+    transform: scale(1.02);
+}
+.login input[type="password"]:hover {
+    transform: scale(1.02);
+}
+
+.login input[type="password"] {
+    transition: transform 0.2s;
+    width: 20vw;
+    margin-left: 1vw;
+    margin-top: 16px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.button-login {
+    width: 20vw;
+    margin-left: 1vw;
+    margin-top: 16px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #009EED;
+    border: 1px solid #009EED;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-login:hover {
+    background-color: #009EED;
+    color: white;
+}
+
+.login img:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+.login p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    transform: scale(1.05);   
+}

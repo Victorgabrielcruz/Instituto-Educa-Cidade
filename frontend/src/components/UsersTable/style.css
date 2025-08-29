@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.main {
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #0099ff;
+}
+
+.create-button {
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.user-table thead {
+  background-color: #0099ff;
+  color: white;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.user-table th:last-child {
+  text-align: center;
+}
+
+.acoes-cell {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button {
+  margin: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button.edit span {
+  color: green;
+}
+
+.icon-button.delete span {
+  color: #d32f2f;
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+tbody {
+  color: black;
+}

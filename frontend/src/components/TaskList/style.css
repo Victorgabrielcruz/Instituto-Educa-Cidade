@@ -1,0 +1,19 @@
+.task-list{
+    background-color: #FFFFFF;
+    width: 100vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+.container-task{
+    max-height: 15vh; 
+    overflow-y: auto;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+}

@@ -1,0 +1,157 @@
+.modal-formulario {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+input#etiqueta.input{
+    margin-left: 0 !important;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.form-container label {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+  margin-left: 2px;
+}
+
+.input.full,
+.textarea.full {
+  width: 100%;
+}
+
+.textarea.half {
+  height: 160px;
+  width: 100%;
+  margin-top: 17px;
+}
+
+/* Erros */
+.erro-input {
+  border-color: red !important;
+}
+
+.erro-geral {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Row padrão para dividir horizontalmente */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 4%;
+  margin-bottom: 20px;
+}
+
+/* Colunas de selects (estado e cidade) */
+/* Grupo de selects */
+.colunas {
+  display: flex;
+  justify-content: space-between;
+  gap: 4%;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.selecao-group {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Selects */
+.selecao-group select {
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+select {
+  margin-left: 0 !important;
+}
+
+/* Garantir que os inputs de datas também não estourem */
+.dates-column {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 150px;
+}
+
+/* Tratamento geral para inputs, selects e textareas */
+input,
+textarea,
+select {
+  background-color: white !important;
+  color: #333;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .row, .colunas {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dates-column {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+}

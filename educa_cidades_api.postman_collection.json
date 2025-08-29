@@ -1,0 +1,1168 @@
+{
+	"info": {
+		"_postman_id": "9d1d2c07-5079-47d6-ada3-d7ef30987d83",
+		"name": "Educa Cidades API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26903076"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsb2FkbWluQGdtYWlsLmNvbSIsImV4cCI6MTc0NTI4MDIzNH0.yvMfY3dQHI9sEFlXHzaVGxyrLlPfoLcep28CtEEVGjBayWnYIZI3ROciWvOYXqsSF798blh47nL-DJEimoDIqg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Italo\",\r\n    \"email\": \"italoadmin@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"profiles\": [\"ADMIN\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDUyNzk1MTh9.jFOEVkOySEflstlN-hDuf16JuYQALhSXVAU6iv1NnEObIFXPJ7fTDtW-C8aT913bWF1m-WkFTNeCA3NvUqvB6g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Italo atualizado\",\r\n    \"password\": \"123456\",\r\n    \"profiles\": [\"USER\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU3MTQzNzF9.cTzmRNyzahBcIF71KAcsNp8kz065g-dq8wr1U-Hq_kF3LkT-RXUUXwYsqxNrfDkMiJP7BTqFsMhnR8mHpMi8cQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsb2NvbXVtQGdtYWlsLmNvbSIsImV4cCI6MTc0NDc1MTU2Nn0.6a9BBkT0evDns1tGdwr5OfTodJBMM2rV3xJ4JYI1pBGRyrFkKbjRlEkXgLIor0J0mrf0ff1V8zdFC9wKAPyh9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsb2NvbXVtQGdtYWlsLmNvbSIsImV4cCI6MTc0NDc0NzEyNX0.EanAtt1qzMQjHIvduCQFepEqeRkTe6qzn19gEQ2kOLYMLAIl1YLfFoUWFCLZg6X9BvlNQGRElgNLLRGrasxqfw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/34",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disable",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDQ3NDgyMzZ9.4oamJ-pR3V8JXg5qa86-zvMSynA5fBWMNVtUxTs_cdhRsnkLV9PwGXAJeqQ2pcImefMB9Wi4DXaxAPkGjS_frQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/disable/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"disable",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enable",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDQ3NDgyMzZ9.4oamJ-pR3V8JXg5qa86-zvMSynA5fBWMNVtUxTs_cdhRsnkLV9PwGXAJeqQ2pcImefMB9Wi4DXaxAPkGjS_frQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/enable/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"enable",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5NjczNjd9.QMmc8te7uVp_0xiSbk3XnaP-M8uB4fIfXPk2srmERacMWwxI5PHY4G_wZ5r949ur0g2csIE2XrK4qjdQJHDrrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"30\",\r\n    \"title\": \"Modelo de produto IGED\",\r\n    \"description\": \"IGEDXYZ\",\r\n    \"defaultTasks\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsbzRAZ21haWwuY29tIiwiZXhwIjoxNzQ0Njg2ODE0fQ.mwUL0uN4S1NlMkA0T5YgIdeojeYidCbzDic-q5kQ1Vu56P2r3OBT0vJXNnid7HUytzgbyEou88lBoYnwt0sZZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"iged\",\r\n    \"title\": \"Título atualizado\",\r\n    \"description\": \"                       \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/products/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnZXN0YW8tYXBpIiwic3ViIjoiSVRBTE9AR01BSUwuQ09NIiwiZXhwIjoxNzQzNjkyNDUyfQ.0hNdm7v7-C8MrbbaM8hZkT92wZqLC3aUAXiHC3P_JMc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/products/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsbzRAZ21haWwuY29tIiwiZXhwIjoxNzQ0Njg2ODE0fQ.mwUL0uN4S1NlMkA0T5YgIdeojeYidCbzDic-q5kQ1Vu56P2r3OBT0vJXNnid7HUytzgbyEou88lBoYnwt0sZZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/products/by-code?code=iged",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"by-code"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "iged"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsbzRAZ21haWwuY29tIiwiZXhwIjoxNzQ0Njg2ODE0fQ.mwUL0uN4S1NlMkA0T5YgIdeojeYidCbzDic-q5kQ1Vu56P2r3OBT0vJXNnid7HUytzgbyEou88lBoYnwt0sZZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/products/by-title?title=atualizado",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"by-title"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "atualizado"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDYzMjAzNzF9.oDq6nF6qfBz0NNf7J136drMHC-_bbHMd0UuxAYsgXCqtdRLFrZM7u7Hp8nufx4ijqKOnp-tpYmcxlDIxSRDsCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnZXN0YW8tYXBpIiwic3ViIjoiSVRBTE9AR01BSUwuQ09NIiwiZXhwIjoxNzQzNjEzNDE5fQ.kEVecL3XzXmhsl17U-hJbXlClNoJ4s_6hHuR4uzjYnc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/products/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Default Task",
+			"item": [
+				{
+					"name": "Associate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5NTk2OTh9.ZUha4QRjQvQvikjQh39BssIryjq8RyFs4SCRPaDz8BC9zKAI_c_WQHcHdqQBq8odIFaW5KYq2HmLMrStWfvGUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Tarefa 1\",\r\n    \"description\": \"Descrição tarefa 1\",\r\n    \"priority\": \"ALTA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/default-tasks/1/associate",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"default-tasks",
+								"1",
+								"associate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsbzRAZ21haWwuY29tIiwiZXhwIjoxNzQ0Njg2ODE0fQ.mwUL0uN4S1NlMkA0T5YgIdeojeYidCbzDic-q5kQ1Vu56P2r3OBT0vJXNnid7HUytzgbyEou88lBoYnwt0sZZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Título da tarefa 1 atualizada\",\r\n    \"description\": \"Descrição da tarefa 1 atualizada\",\r\n    \"priority\": \"BAIXA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/default-tasks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"default-tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpdGFsbzRAZ21haWwuY29tIiwiZXhwIjoxNzQ0Njg2ODE0fQ.mwUL0uN4S1NlMkA0T5YgIdeojeYidCbzDic-q5kQ1Vu56P2r3OBT0vJXNnid7HUytzgbyEou88lBoYnwt0sZZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/default-tasks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"default-tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5NjU2OTh9.jOC0ghHJs151-1qjWej7C_LGQRykJdb4Y88EDYJqQROoSFfGxaR3Wchpjk-o6cm7a_IdOGaJhn5kJez_DBVDWg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"12345\",\r\n    \"title\": \"Projeto teste\",\r\n    \"description\": \"\",\r\n    \"objective\": \"\",\r\n    \"city\": \"Santa Luzia\",\r\n    \"state\": \"Minas Gerais\",\r\n    \"country\": \"Brasil\",\r\n    \"expectedStart\": \"2025-04-16\",\r\n    \"expectedEnd\": \"2025-12-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDQ4NTE0NzR9.DdHTW1giEGFQ1ou4Vg_06_JVL1F2bo7DeJDhkvsV4lNxizJU1IFGpoi92pQfhAVT1tZRJA9H_8MW1MH2gjRzwQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"12345\",\r\n    \"title\": \"Projeto teste atualizado\",\r\n    \"description\": \"\",\r\n    \"city\": \"Santa Luzia\",\r\n    \"state\": \"Minas Gerais\",\r\n    \"country\": \"Brasil\",\r\n    \"expectedStart\": \"2025-05-16\",\r\n    \"expectedEnd\": \"2025-12-31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5Njg2MTh9.Lks3P1b3gntJ2w6wL6gB1FB-0GkdzkSF_xipanH4dOPwrXe0whCXrRy3xeTqAoiuO5zzQUTUiCpBbLxRLzE_xg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDUyNTQ2NTV9.9aQtW_Fr1TeuMXmWu1lJ04SPuC6rG4r5QONJODSP44iorD5lP_MOFgT-wHil81NKfhNEJ-zP8X7T5Cf23J55qg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/by-code?code=1234",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"by-code"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDYzMjAzNzF9.oDq6nF6qfBz0NNf7J136drMHC-_bbHMd0UuxAYsgXCqtdRLFrZM7u7Hp8nufx4ijqKOnp-tpYmcxlDIxSRDsCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDUyNTQ2NTV9.9aQtW_Fr1TeuMXmWu1lJ04SPuC6rG4r5QONJODSP44iorD5lP_MOFgT-wHil81NKfhNEJ-zP8X7T5Cf23J55qg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects/by-title?title=teste",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects",
+								"by-title"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "teste"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDYzMjAzNzF9.oDq6nF6qfBz0NNf7J136drMHC-_bbHMd0UuxAYsgXCqtdRLFrZM7u7Hp8nufx4ijqKOnp-tpYmcxlDIxSRDsCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Tarefa 2 dentro do projeto\",\r\n    \"description\": \"Teste descricao\",\r\n    \"priority\": \"BAIXA\",\r\n    \"defaultTaskId\": 0,\r\n    \"projectProductId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/tasks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU4NzgwNTl9.H5gyMbsX_GvMKfLDHbSkoGGC4jXwKO7xj34H35vGIhmqx5_8Ak8hzjhRBlJ9HQKEfCLs0PYJs6gR_fiU3qW3tQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Título da tarefa 1 atualizado.\",\r\n    \"description\": \"      \",\r\n    \"priority\": \"ALTA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/tasks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5Njg2MTh9.Lks3P1b3gntJ2w6wL6gB1FB-0GkdzkSF_xipanH4dOPwrXe0whCXrRy3xeTqAoiuO5zzQUTUiCpBbLxRLzE_xg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tasks/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU4NzgwNTl9.H5gyMbsX_GvMKfLDHbSkoGGC4jXwKO7xj34H35vGIhmqx5_8Ak8hzjhRBlJ9HQKEfCLs0PYJs6gR_fiU3qW3tQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tasks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU4ODAxODN9.o9hpCrYVs2FbKDYTRgPQSn8FCIGz1Grify8fMUHK-e3AwcfpYNVrWLfaq54_2-Jagiu_VmVxSWTE_fcyTVKUkw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tasks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all by project product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDYzMjAzNzF9.oDq6nF6qfBz0NNf7J136drMHC-_bbHMd0UuxAYsgXCqtdRLFrZM7u7Hp8nufx4ijqKOnp-tpYmcxlDIxSRDsCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tasks/project-product/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks",
+								"project-product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set as default",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5NjU2OTh9.jOC0ghHJs151-1qjWej7C_LGQRykJdb4Y88EDYJqQROoSFfGxaR3Wchpjk-o6cm7a_IdOGaJhn5kJez_DBVDWg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tasks/set-as-default/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tasks",
+								"set-as-default",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProjectProdut",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDYzMjAzNzF9.oDq6nF6qfBz0NNf7J136drMHC-_bbHMd0UuxAYsgXCqtdRLFrZM7u7Hp8nufx4ijqKOnp-tpYmcxlDIxSRDsCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idProject\": 1,\r\n    \"idProduct\": 3,\r\n    \"expectedStart\": \"2025-12-12\",\r\n    \"expectedEnd\": \"2025-12-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/projects-products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects-products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDYzMjAzNzF9.oDq6nF6qfBz0NNf7J136drMHC-_bbHMd0UuxAYsgXCqtdRLFrZM7u7Hp8nufx4ijqKOnp-tpYmcxlDIxSRDsCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects-products/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects-products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5NjU2OTh9.jOC0ghHJs151-1qjWej7C_LGQRykJdb4Y88EDYJqQROoSFfGxaR3Wchpjk-o6cm7a_IdOGaJhn5kJez_DBVDWg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects-products/project/1/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects-products",
+								"project",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJleHAiOjE3NDU5Njg2MTh9.Lks3P1b3gntJ2w6wL6gB1FB-0GkdzkSF_xipanH4dOPwrXe0whCXrRy3xeTqAoiuO5zzQUTUiCpBbLxRLzE_xg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projects-products/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projects-products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}

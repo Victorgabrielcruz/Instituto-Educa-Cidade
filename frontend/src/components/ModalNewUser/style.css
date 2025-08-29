@@ -1,0 +1,118 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.modal-title {
+  font-size: 24px;
+  color: #007bff;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 17vw !important;
+  margin-left: 0 !important;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.modal-form input,
+.modal-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  color: black;
+  background-color: #d1d5db;
+  margin-left: 0px;
+}
+
+.button {
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  margin-left: 0;
+}
+
+.criar-button {
+  background-color: #00aaff;
+}
+
+.cancelar-button {
+  background-color: #fa4f46;
+
+  &:hover {
+    background-color: #e0473f;
+  }
+}
+
+.criar-button:hover {
+  background-color: #007acc;
+}
+
+.modal-form__footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-form__footer button {
+  margin: 0;
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-requirements {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 15px 0;
+}
+
+.password-requirements li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.password-requirements li.valid {
+  color: green;
+}
+
+.password-requirements li.invalid {
+  color: red;
+}

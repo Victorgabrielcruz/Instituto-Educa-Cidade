@@ -1,0 +1,300 @@
+/* HomePage.css */
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Fundo suave para toda a página */
+  font-family: 'Arial', sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 40px 20px;
+  flex-grow: 1; /* Permite que o container ocupe o espaço restante */
+  color: #333;
+  text-align: center;
+}
+
+/* --- Cabeçalho --- */
+.home-header {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-header h1 {
+  font-size: 2.8em;
+  color: #0056b3; /* Azul escuro para o título principal */
+  margin-bottom: 5px;
+}
+
+.system-description {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 700px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* --- Logo --- */
+.logo-container {
+  margin-bottom: 50px;
+}
+
+.educacidades-logo {
+  max-width: 350px; /* Tamanho da logo */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- Seção de Cards Principais (Produtos e Projetos) --- */
+.home-cards-section {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+  justify-content: center;
+  gap: 30px; /* Espaçamento entre os cards */
+  margin-bottom: 60px;
+}
+
+.home-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 30px;
+  width: 100%;
+  max-width: 380px; /* Largura máxima do card */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui o conteúdo verticalmente */
+  min-height: 220px; /* Altura mínima para consistência */
+}
+
+.home-card:hover {
+  transform: translateY(-8px); /* Efeito de elevação ao passar o mouse */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+}
+
+.home-card h2 {
+  font-size: 1.8em;
+  color: #007bff; /* Azul primário para os títulos dos cards */
+  margin-bottom: 15px;
+}
+
+.home-card h2 a {
+  text-decoration: none;
+  color: inherit; /* Mantém a cor do h2 */
+}
+
+.home-card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível */
+}
+
+.home-card-button {
+  display: inline-block;
+  background-color: #007bff; /* Azul primário para os botões */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 0.95em;
+}
+
+.home-card-button:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* --- Seção do Dashboard de Tarefas do Usuário --- */
+.user-dashboard-section {
+    width: 100%;
+    max-width: 700px; /* Limita a largura da seção para não ficar muito larga */
+    margin-top: 30px;
+    margin-bottom: 40px; /* Espaçamento antes dos cards principais */
+    display: flex;
+    justify-content: center; /* Centraliza o card de tarefas dentro da seção */
+}
+
+.user-tasks-card {
+    background-color: #eaf6ff; /* Um fundo azul claro para destacar */
+    border: 1px solid #b3d9ff; /* Borda sutil */
+    border-radius: 12px;
+    padding: 25px 30px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Sombra mais leve que os cards principais */
+    width: 100%; /* Ocupa a largura máxima definida pelo parent */
+    max-width: 400px; /* Limita a largura do card em si */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.user-tasks-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação leve */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.user-tasks-card h2 {
+    font-size: 2em; /* Título um pouco maior para o dashboard */
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.user-tasks-card .tasks-count {
+    font-size: 4em; /* Tamanho grande e impactante para o número */
+    font-weight: bold;
+    color: #28a745; /* Verde para destacar a quantidade de tarefas */
+    margin-bottom: 5px;
+    line-height: 1; /* Garante que o número não adicione espaçamento extra */
+}
+
+.user-tasks-card p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.user-tasks-card .tasks-button {
+    background-color: #28a745; /* Botão verde para a chamada de ação das tarefas */
+}
+
+.user-tasks-card .tasks-button:hover {
+    background-color: #218838;
+}
+
+
+/* --- Rodapé --- */
+.home-footer {
+  margin-top: auto; /* Empurra o rodapé para a parte inferior */
+  padding: 20px; /* Padding para o rodapé */
+  border-top: 1px solid #e0e0e0; /* Linha divisória */
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+}
+
+.home-footer p {
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* --- Estados de Carregamento e Erro --- */
+.home-container.loading,
+.home-container.error {
+  min-height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: #dc3545; /* Vermelho para mensagens de erro */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2.2em;
+  }
+
+  .system-description {
+    font-size: 1em;
+    padding: 0 10px; /* Ajuste para o texto não encostar nas bordas */
+  }
+
+  .educacidades-logo {
+    max-width: 200px;
+  }
+
+  .home-cards-section {
+    flex-direction: column; /* Empilha os cards em telas menores */
+    align-items: center;
+    gap: 25px; /* Ajusta o espaçamento */
+  }
+
+  .home-card {
+    padding: 25px;
+    max-width: 90%; /* Ocupa mais largura */
+    min-height: auto; /* Remove altura mínima para flexibilidade */
+  }
+
+  .home-card h2 {
+    font-size: 1.5em;
+  }
+
+  .user-dashboard-section {
+      margin-top: 20px;
+      margin-bottom: 30px;
+  }
+
+  .user-tasks-card {
+      padding: 20px 25px;
+      max-width: 90%;
+  }
+
+  .user-tasks-card h2 {
+      font-size: 1.6em;
+  }
+
+  .user-tasks-card .tasks-count {
+      font-size: 3.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 30px 15px;
+  }
+
+  .home-header h1 {
+    font-size: 1.8em;
+  }
+
+  .educacidades-logo {
+    max-width: 180px;
+  }
+
+  .home-cards-section {
+    gap: 20px;
+  }
+
+  .home-card {
+    padding: 20px;
+    /* max-width já está em 90% */
+  }
+
+  .home-card h2 {
+    font-size: 1.3em;
+  }
+
+  .home-card-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .user-tasks-card {
+      padding: 15px 20px;
+  }
+
+  .user-tasks-card h2 {
+      font-size: 1.4em;
+  }
+
+  .user-tasks-card .tasks-count {
+      font-size: 3em;
+  }
+
+  .user-tasks-card p {
+      font-size: 1em;
+  }
+}

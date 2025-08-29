@@ -1,0 +1,132 @@
+.container-perfil-usuario .perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  min-height: 70vh;
+}
+
+.container-perfil-usuario .imagem-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.container-perfil-usuario .user-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.container-perfil-usuario .projeto-info input {
+  width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin: 0px 0px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-perfil-usuario .botoes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.container-perfil-usuario .botoes .card-button-cancelar {
+    margin: 16px 0px;
+}
+
+.card-button-cancelar {
+  background-color: #ff0000;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-button-cancelar:hover {
+  background-color: #cc0000;
+}
+
+#input-email{
+  opacity: 0.4;
+}
+
+/* Overlay semi-transparente que ocupa a tela inteira */
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Certifique-se de que fique acima de tudo */
+}
+
+/* Caixa branca centralizada */
+.custom-alert-modal {
+  background-color: #ffffff;
+  color: black;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 400px;
+  position: relative; /* Para posicionar o botão de fechar */
+  text-align: center;
+  font-weight: bold;
+  animation: fadeInModal 0.3s ease-in-out;
+}
+
+/* Botão “X” no canto superior direito do modal */
+.custom-alert-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+}
+
+/* Animação de fade-in do modal */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.title-header{
+  margin-top: 0px;
+}
+
+.Centralizar-Campos h3{
+  width: auto;
+}
+
+.perfil-footer {
+    margin-top: auto; 
+    padding: 20px; 
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: center; 
+    background-color: #f8f8f8; 
+    color: #555; 
+}
+
+.perfil-footer p {
+    font-size: 0.9em;
+    color: #777; 
+    text-align: center;
+}

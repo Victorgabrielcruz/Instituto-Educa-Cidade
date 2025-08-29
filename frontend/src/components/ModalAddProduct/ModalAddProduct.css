@@ -1,0 +1,143 @@
+.modal-sobre {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-add {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.modal-sobre .modal-add label {
+  margin-left: 0 !important;
+}
+
+.modal-titulo {
+  font-size: 24px;
+  color: #009eed;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.selecao-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.selecao-group label {
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.modal-add input,
+.modal-add select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.modal-add input:focus,
+.modal-add select:focus {
+  border-color: #007bff;
+}
+
+.erro-input {
+  border-color: red !important;
+}
+
+.erro-campo {
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+.erro-geral {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal-dates {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.modal-dates .selecao-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.button-open {
+  background-color: #2d9cdb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-open:hover {
+  background-color: #1a73e8;
+}
+
+.button-close {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-close:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .modal-dates {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .modal-add {
+    padding: 20px;
+  }
+}

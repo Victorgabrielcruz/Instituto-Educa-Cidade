@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 98vw;
+  height: 100vh;
+}
+
+.container-detalhes-produto h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  margin-left: 2vw;
+  margin-top: 20px;
+  width: 88vw;
+  text-align: left;
+}
+
+.container-detalhes-produto p {
+  color: #000;
+  font-size: 20px;
+  margin-left: 2vw;
+  margin-top: 10px;
+  width: 88vw;
+  text-align: left;
+}
+
+.container-detalhes-produto .botoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.container-detalhes-produto .botoes_modal {
+  margin-top: 30px;
+  justify-content: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.container-detalhes-produto button {
+  background-color: #009eed;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-detalhes-produto button:hover {
+  background-color: #007bb5;
+  transform: scale(1.05);
+}
+
+.container-detalhes-produto .remover-btn {
+  background-color: #ff4d4f;
+}
+.container-detalhes-produto .remover-btn:hover {
+  background-color: #d9363e;
+}
+
+.container-detalhes-produto .header-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88vw;
+  align-items: baseline;
+}
+
+.container-detalhes-produto .tabela-tarefas {
+  width: 88vw;
+  margin-left: 2vw;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: left;
+  margin-bottom: 50px;
+  max-height: 80vh;
+}
+.container-detalhes-produto .tabela-tarefas th,
+.tabela-tarefas td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 20px;
+  color: #000;
+}
+
+.container-detalhes-produto .tabela-tarefas th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.container-detalhes-produto .icon-button {
+  margin: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-detalhes-produto .icon-button.edit {
+  color: green;
+}
+
+.container-detalhes-produto .icon-button.detalhes {
+  color: blue;
+}
+
+.container-detalhes-produto .icon-button.delete {
+  color: #d32f2f;
+}
+
+.container-detalhes-produto .space-y-4 p {
+  max-width: 500px;
+}
+
+.container-detalhes-produto .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.container-detalhes-produto .modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 440px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.container-detalhes-produto .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 0%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-detalhes-produto .modal-close:hover {
+  background: #d9363e;
+}
+
+.container-detalhes-produto .modal-content .form-field {
+  margin-bottom: 16px;
+}
+
+.container-detalhes-produto .modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.container-detalhes-produto .modal-content select
+{
+  margin-left: 2vh !important;
+}
+
+.container-detalhes-produto .modal-content textarea {
+  margin-left: 1vw;
+  height: 120px;
+}
+
+.container-detalhes-produto .modal-content .flex {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.container-detalhes-produto .form-field.date {
+  margin-left: 1vw;
+}
+
+.container-detalhes-produto .modal-content h3 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 400px;
+}
+
+.container-detalhes-produto .alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.container-detalhes-produto .alert-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.container-detalhes-produto .alert-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+  width: auto;
+  text-align: center;
+}
+
+.container-detalhes-produto .alert-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container-detalhes-produto .alert-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.container-detalhes-produto .alert-button.confirm {
+  background-color: #009eed;
+  color: white;
+}
+
+.container-detalhes-produto .alert-button.confirm:hover {
+  background-color: #007bb5;
+}
+
+.container-detalhes-produto .alert-button.cancel {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.container-detalhes-produto .alert-button.cancel:hover {
+  background-color: #d9363e;
+}
+
+.container-detalhes-produto .modal-content {
+  width: 50rem;
+}
+
+.container-detalhes-produto .header-linha .filter-select {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  align-items: start;
+}
+
+.baixar-relatorio-btn {
+  background-color: #28a745 !important;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.baixar-relatorio-btn:hover {
+  background-color: #218838 !important;
+}
+
+.remover-btn {
+  background-color: #dc3545 !important;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.remover-btn:hover {
+  background-color: #c82333 !important;
+}
+
+.criar-btn {
+  background-color: #007bff !important;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.detalhes-footer {
+    margin-top: auto; 
+    padding: 20px; 
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: center; 
+    background-color: #f8f8f8; 
+    color: #555; 
+}
+
+.detalhes-footer p {
+    font-size: 0.9em;
+    color: #777; 
+    text-align: center;
+}
